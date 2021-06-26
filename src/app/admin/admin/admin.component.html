@@ -1,0 +1,61 @@
+<ng-container>
+	<!--toolbar-->
+	<mat-toolbar color="primary" class="example-header">
+		<button mat-icon-button (click)="sidenav.toggle()">
+			<mat-icon>menu</mat-icon>
+		</button>
+		<span>Menu</span>
+		<div class="uk-width-expand"></div>
+		<form>
+			<input class="search" type="text" placeholder="Cari..." required>
+			<input class="button" type="button" value="Cari">
+		</form>
+		<button mat-button routerLink="/admin/info">
+			<mat-icon>account_circle</mat-icon>
+		</button>
+		<button mat-button>LOGOUT</button>
+	</mat-toolbar>
+	<!--end toolbar-->
+
+	<mat-sidenav-container class="admin-container">
+		<mat-sidenav
+			#sidenav
+			mode="side"
+			[position]="'start'"
+			opened
+			class="sidenav-left"
+			[fixedInViewport]="true"
+			[fixedTopGap]="60"
+			[fixedBottomGap]="0">
+			
+			<mat-nav-list>
+				<mat-list-item routerLink="/admin/home">
+					<mat-icon matListIcon>home</mat-icon>
+					<h3 matLine>Home</h3>
+				</mat-list-item>
+		
+				<mat-list-item routerLink="/admin/barang">
+					<mat-icon matListIcon>shopping_cart</mat-icon>
+					<h3 matLine>Products</h3>
+				</mat-list-item>
+		 </mat-nav-list>
+
+		</mat-sidenav>	
+		<mat-sidenav
+			#sidenav
+			mode="side"
+			[position]="'end'"
+			class="example-sidenav"
+			[fixedInViewport]="true"
+			[fixedTopGap]="60"
+			[fixedBottomGap]="0">
+		</mat-sidenav>
+		
+		<!--sidenav content-->
+		<mat-sidenav-content style="padding: 20px; background-color:rgb(252, 190, 244);">
+		<!--halaman-halaman tampil disini-->
+			<router-outlet></router-outlet>
+		</mat-sidenav-content>
+		<!--end sidenav content-->
+	</mat-sidenav-container>   
+</ng-container>

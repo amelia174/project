@@ -1,0 +1,42 @@
+.example-container {
+  position: absolute;
+  top: 60px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+}
+
+.example-sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+}
+.sidenav-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+}
+
+form {
+  width:500px;
+  margin:50px auto;
+}
+.search {
+  padding:8px 25px;
+  background:rgb(255, 255, 255);
+  border:0px solid #000000;
+}
+.button {
+  position:left;
+  padding:6px 15px;
+  left:-8px;
+  border:2px solid #f18bec;
+  background-color:#fa54ec;
+  color:#ffffff;
+}
+.button:hover  {
+  background-color:#fa54ecec;
+  color:#ffffff;
+}
