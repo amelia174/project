@@ -1,25 +1,43 @@
-<div class="uk-flex uk-flex-min uk-flex-right uk-height-min">
-    <button mat-raised-button color="primary"
-    matBadge="+" matBadgePosition="after" matBadgeColor="accent">
-    + Tambah Products
-</button>
-</div>
-<mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
+<mat-card>
+  <mat-card-header>
+      <mat-card-title>{{title}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <div class="uk-flex">
+          <span class="uk-width-expand"></span>
+          <button mat-flat-button color="primary" (click)="barangDetail({},-1)">Tambah Produk</button>
+      </div>
+      <table class="uk-table uk-table-middle uk-table-divider">
+        <th>No</th>
+        <th>Date</th>
+        <th>Kode</th>
+        <th>Nama</th>
+        <th>Jenis</th>
+        <th>Ukuran</th>
+        <th>Harga</th>
+        <th>Warna</th>
+        <th>Merek</th>
+        <th>Stok</th>                
+        <th align="right"></th>
+        <tbody>
+          <tr *ngFor="let product of products; let idx=index">
+          <td>{{idx+1}}</td>
+          <td>{{product.kode}}</td>
+          <td>{{product.title}}</td>
+          <td>{{product.jenis}}</td>
+          <td>{{product.size}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.color}}</td>
+          <td>{{product.produk}}</td>
+          <td>{{product.stok}}</td>
+          <td align="right">
+             <button mat-button color="primary" (click)="barangDetail(product,idx)">Edit</button>
+            <button mat-button color="warn" (click)="deleteProduct(product.id, idx)"[disabled]="loadingDelete[idx]">{{loadingDelete[idx] ? 'Deleting..':'Delete'}}</button>
+         </td>
+        </tr>
+      </tbody>
+    <thead>
+  </thead>
+</table>
+</mat-card-content>
+</mat-card>

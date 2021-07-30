@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "katalog-pink-shop": {
+      "hosting": {
+        "ameliaproject": [
+          "katalog-pink-shop"
+        ]
+      }
+    }
+  }
+}

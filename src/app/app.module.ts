@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -11,6 +10,9 @@ import { MaterialDesign } from './material/material';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
+
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment.prod';
 
 
 @NgModule({
@@ -23,12 +25,14 @@ import {MatIconModule} from '@angular/material/icon';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
     BrowserAnimationsModule,
     MaterialDesign,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
+    
 
   ],
   providers: [],

@@ -16,6 +16,29 @@ export class AdminComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.checkLogin();
+  }
+
+  checkLogin()
+  {
+    //this.api.get('bookswithauth/status').subscribe(res=>{
+      //is logged in
+      //return;
+    //},error=>{
+      // not logged in
+      //this.router.navigate(['/login']);
+    //})
+  }
+
+  logout()
+  {
+    let conf=confirm('Keluar Aplikasi?');
+    if(conf)
+    {
+      localStorage.removeItem('appToken');
+      //window.location.reload();
+      this.router.navigate(['/login']);
+    }
   }
 
 }

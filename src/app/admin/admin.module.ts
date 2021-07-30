@@ -8,6 +8,9 @@ import { MaterialDesign } from '../material/material';
 import { RouterModule, Routes } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { InfoComponent } from './info/info.component';
+import { BarangDetailComponent } from './barang-detail/barang-detail.component';
+import { PicUploaderComponent } from './pic-uploader/pic-uploader.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -45,13 +48,16 @@ const routes: Routes = [
     BarangComponent,
     HomeComponent,
     PencarianComponent,
-    InfoComponent
+    InfoComponent,
+    BarangDetailComponent,
+    PicUploaderComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     MaterialDesign,
     MatIconModule,
+    FormsModule
   ]
 })
 export class AdminModule { }

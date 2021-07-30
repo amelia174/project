@@ -1,17 +1,89 @@
-<div class="uk-flex uk-flex-cover uk-flex-center uk-height-viewport">
-    <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>PINK SHOP</mat-card-title>
-          <mat-card-subtitle>Toko Fashion</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="assets/Pinkashop.jpeg" alt="Toko Pink Shop">
-        <mat-card-content>
-          <p>
-            Pink Shop adalah Toko Fashion yang memiliki berbagai produk pakaian mulai dari baju, celana, dan lain-lain tentunya dengan kualitas yang terbaik. 
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-        </mat-card-actions>
-      </mat-card>
-</div>
+<mat-tab-group mat-align-tabs="center" animationDuration="200ms">
+  <mat-tab label="Deskripsi">
+    <div class="uk-flex uk-flex-viewport uk-flex-center">
+      <mat-card class="example-card">
+          <mat-card-header class="uk-flex-center">
+            <div mat-card-title class="uk-flex-center uk-flex-cover">PINK SHOP</div>
+            <div mat-card-subtitle class="uk-flex-center">Toko Fashion</div>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="uk-flex uk-flex-min uk-flex-center">
+              <img mat-card-image src="assets/Pinkashop.jpeg" alt="Toko Pink Shop">
+            </div>
+            <p>
+              Selamat datang dears.
+              Pink Shop adalah Toko Fashion yang memiliki berbagai produk pakaian mulai dari baju, celana, dan lain-lain tentunya dengan kualitas yang terbaik. 
+            </p>
+          </mat-card-content>
+          <mat-divider></mat-divider>
+          <mat-card-actions>
+            <section>
+              <div class="example-label">Kontak</div>
+              <div class="example-button-row">
+                <button mat-button color="accent">WhatsApp</button>
+                <button mat-button color="primary">Facebook</button>
+                <button mat-button color="warn">Instagram</button>
+              </div>
+            </section>
+          </mat-card-actions>
+        </mat-card>
+  </div>  
+  </mat-tab>
+
+  <mat-tab label="Katalog">
+    <mat-card class="uk-flex uk-flex-viewport uk-flex-center">
+      <mat-card-header class="uk-flex-right">
+        <mat-card-title>Katalog Baru</mat-card-title>
+        <mat-card-subtitle>Priode Juli</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-grid-list cols="2" rowHeight="2:1" class="uk-flex uk-flex-viewport uk-flex-center">
+          <mat-grid-tile>
+            <div class="uk-flex uk-flex-middle uk-flex-center uk-width-medium">
+              <img mat-card-image src="assets/produk2.jpg" class="uk-flex-center uk-width-expand" alt="Photo of a Shiba Inu">
+              </div>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <div class="caption">
+            <p>
+              Kode: 678
+              <br>
+              Nama: Kemeja Roses
+              <br>
+              Ukuran: L/M/XL
+              <br>
+              Harga: 680000
+              <br>
+              Warna: Merah, Hijau, Pink, (pastel)
+              <br>
+              Merek: CDC
+            </p>
+            </div>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <div class="uk-flex uk-flex-middle uk-flex-center uk-width-medium">
+              <img mat-card-image src="assets/produk3.jpg" class="uk-flex-center uk-width-expand" alt="Photo of a Shiba Inu">
+              </div>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <div class="caption">
+              <p>
+                Kode: 689
+                <br>
+                Nama: Blezer Batik
+                <br>
+                Ukuran: L/M/XL
+                <br>
+                Harga: 680000
+                <br>
+                Warna: Merah, Hijau, Pink, (pastel)
+                <br>
+                Merek: CDC
+              </p>
+              </div>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-content>
+    </mat-card>
+  </mat-tab>
+</mat-tab-group>

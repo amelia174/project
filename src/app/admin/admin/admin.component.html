@@ -10,10 +10,10 @@
 			<input class="search" type="text" placeholder="Cari..." required>
 			<input class="button" type="button" value="Cari">
 		</form>
-		<button mat-button routerLink="/admin/info">
+		<button mat-button routerLink="/admin/">
 			<mat-icon>account_circle</mat-icon>
 		</button>
-		<button mat-button>LOGOUT</button>
+		<button mat-button (click)="logout()">LOGOUT</button>
 	</mat-toolbar>
 	<!--end toolbar-->
 
